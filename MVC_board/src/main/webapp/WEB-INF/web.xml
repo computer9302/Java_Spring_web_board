@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee">
+	<display-name>MVC_board</display-name>
+	
+	<!-- listener -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-name>/WEB-INF/applicationContext.xml</param-name>
+	</context-param>
+	
+	<!-- DispatcherServlet -->
+	<servlet>
+		<servlet-name>hello</servlet-name>
+		<servlet_class>org.springframework.web.servlet.DispatchersServlet</servlet_class>
+	</servlet>
+	<sevlet-mapping>
+		<servlet-name>hello</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</sevlet-mapping>
+</web-app>
