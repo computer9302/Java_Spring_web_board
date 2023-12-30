@@ -8,16 +8,16 @@
 	</listener>
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-name>/WEB-INF/applicationContext.xml</param-name>
+		<param-value>/WEB-INF/applicationContext.xml</param-value>
 	</context-param>
 	
 	<!-- DispatcherServlet -->
 	<servlet>
 		<servlet-name>hello</servlet-name>
-		<servlet_class>org.springframework.web.servlet.DispatchersServlet</servlet_class>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 	</servlet>
-	<sevlet-mapping>
+	<servlet-mapping>
 		<servlet-name>hello</servlet-name>
 		<url-pattern>*.do</url-pattern>
-	</sevlet-mapping>
+	</servlet-mapping>
 </web-app>
