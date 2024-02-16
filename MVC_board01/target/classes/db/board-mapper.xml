@@ -2,6 +2,36 @@
 <!DOCTYPE mapper
 	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper>
+	
+<mapper namespace="myboard">
 
+	<resultMap type="boardDto" id="boardMap">
+		<id column="BD_NO" property="bd_no" />
+		<result column="BD_NAME" property="bd_name"/>
+		<result column="BD_TITLE" property="bd_title"/>
+		<result column="BD_CONTENT" property="bd_content"/>
+		<result column="BD_DATE" property="bd_date"/>
+	</resultMap>
+
+	<select id="selectList" resultMap="boardMap">
+		select BD_NO, BD_NAME, BD_TITLE, BD_CONTENT, BD_DATE
+		FROM STSBOARD
+	</select>
+	
+	<select id="selectOne" resultType="boardDto" parameterType="int">
+		select BD_NO, BD_NAME, BD_TITLE, BD_CONTENT, BD_DATE
+		FROM STSBOARD
+		 WHERE BD_NO = #{bd_no}
+	</select>
+	
+	<insert id="insert" parameterType="baordDto">
+		INSERT INTO STSBOARD
+		VALUES(STSBD_SEQ.NEXTVAL, #{bd_name}, #{bd_title}, #{bd_content}, SYSDATE)
+	</insert>
+	
+	<update id="update" parameterType="boardDto">
+		UPDATE STSBOARD
+		SET BD_TITLE=#{bd_title}, BD_CONTENT=#{bd_content} WHERE BD_NO=#{bd_no}
+	</update>
+	
 </mapper>
