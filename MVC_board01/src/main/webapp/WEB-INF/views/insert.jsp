@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="bdupdate.do" method="post">
+	<form action="bdinsert.do" method="post">
 	<table border="1">
 		<tr>
 			<th>NAME</th>

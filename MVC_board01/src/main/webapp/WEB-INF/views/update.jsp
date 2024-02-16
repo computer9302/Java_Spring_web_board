@@ -14,7 +14,7 @@
 	<table border="1">
 		<tr>
 			<th>NAME</th>
-			<td>$(dto.bd_name)</td>
+			<td>${dto.bd_name}</td>
 		</tr>
 		<tr>
 			<th>TITLE</th>
