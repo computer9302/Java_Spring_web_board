@@ -3,6 +3,7 @@
 PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+
 	<typeAliases>
 		<typeAlias type="com.mvc.board.Dto.BoardDto" alias="boardDto"/>
 	</typeAliases>
@@ -10,4 +11,5 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 	<mappers>
 		<mapper resource="/db/board-mapper.xml"/>
 	</mappers>
+	
 </configuration>

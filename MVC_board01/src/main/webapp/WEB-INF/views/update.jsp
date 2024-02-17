@@ -22,7 +22,7 @@
 		</tr>	
 		<tr>
 			<th>CONTENT</th>
-			<td><textarea rows="10" cols="60" name="${dto.bd_content}"></textarea>
+			<td><textarea rows="10" cols="60" name="bd_content">${dto.bd_content}</textarea>
 		</tr>
 		<tr>
 			<td colspan="2" align="right">

@@ -91,4 +91,16 @@ public class HomeController {
 			return "redirect:insert.do";
 		}
 	}
+	
+	@RequestMapping("/delete.do")
+	public String delete(int bd_no) {
+		logger.info("DELETE");
+		
+		int res = biz.delete(bd_no);
+		if(res>0) {
+			return "redirect:list.do";
+		} else {
+			return "redirect:one.do?bd_no="+bd_no;
+		}
+	}
 }

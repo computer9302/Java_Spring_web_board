@@ -34,4 +34,8 @@
 		SET BD_TITLE=#{bd_title}, BD_CONTENT=#{bd_content} WHERE BD_NO=#{bd_no}
 	</update>
 	
+	<delete id="delete" parameterType="int">
+		DELETE FROM STSBOARD WHERE BD_NO=#{bd_no}
+	</delete>
+	
 </mapper>
