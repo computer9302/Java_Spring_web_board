@@ -97,6 +97,7 @@ public class HomeController {
 		logger.info("DELETE");
 		
 		int res = biz.delete(bd_no);
+	
 		if(res>0) {
 			return "redirect:list.do";
 		} else {
