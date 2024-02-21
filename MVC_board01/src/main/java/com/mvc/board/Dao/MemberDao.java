@@ -1,5 +1,10 @@
 package com.mvc.board.Dao;
 
-public interface MemberDao {
+import com.mvc.board.Dto.MemberDto;
 
+public interface MemberDao {
+	String NAMESPACE = "mymember";
+	
+	//로그인
+	public MemberDto login(MemberDto dto);
 }

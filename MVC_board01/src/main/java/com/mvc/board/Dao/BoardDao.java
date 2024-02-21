@@ -6,7 +6,6 @@ import org.springframework.stereotype.Service;
 
 import com.mvc.board.Dto.BoardDto;
 
-@Service
 public interface BoardDao {
 	String NAMESPACE = "myboard.";
 	
