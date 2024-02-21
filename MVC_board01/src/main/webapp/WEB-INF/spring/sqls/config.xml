@@ -6,10 +6,12 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 
 	<typeAliases>
 		<typeAlias type="com.mvc.board.Dto.BoardDto" alias="boardDto"/>
+		<typeAlias type="com.mvc.board.Dto.MemberDto" alias="memberDto"/> 
 	</typeAliases>
 	
 	<mappers>
 		<mapper resource="/db/board-mapper.xml"/>
+		<mapper resource="/mybatis/member-mapper.xml"/>
 	</mappers>
 	
 </configuration>
