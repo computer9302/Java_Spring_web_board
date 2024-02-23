@@ -31,7 +31,7 @@
 	<!-- mybatis -->
 	<bean class="org.mybatis.spring.SqlSessionFactoryBean" id="sqlSession">
 		<property name="dataSource" ref="dataSource" />
-		<property name="configLocation" value="WEB-INF/spring/db/config.xml"></property>		
+		<property name="configLocation" value="WEB-INF/spring/sqls/config.xml"></property>		
 	</bean>
 	
 	<!--  mybatis-template -->
