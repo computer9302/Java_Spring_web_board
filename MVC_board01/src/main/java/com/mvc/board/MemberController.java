@@ -31,7 +31,13 @@ public class MemberController {
 	public String userlogin(MemberDto dto, HttpServletRequest request) {
 		logger.info("LOGIN");
 		
+		//세션 생성
 		HttpSession session = request.getSession();
+		System.out.println("세션 아이디: " + session.getId());
+		
+		//세션 유효시간
+		session.setMaxInactiveInterval(3600);
+		System.out.println("세션 유효시간: " + session.getMaxInactiveInterval());
 		
 		MemberDto res = biz.login(dto);
 		
@@ -41,6 +47,7 @@ public class MemberController {
 			session.setAttribute("res", res);
 			return "redirect:list.do";
 		}else {
+			
 			return "redirect:login.do";
 		}
 		
